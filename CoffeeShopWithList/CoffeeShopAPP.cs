@@ -124,7 +124,6 @@ namespace CoffeeShopWithList
                 Clear();
             }
         }
-
         private void AddToList()
         {
             customerName.Add(cName);
@@ -139,13 +138,10 @@ namespace CoffeeShopWithList
             coffeCost.Add(cost.ToString());
         }
 
-
-
         private bool CheckIfNumeric(string input)
         {
             return input.IsNumeric();
         }
-
         private void Clear()
         {
             customerNameTextBox.Clear();
@@ -154,12 +150,10 @@ namespace CoffeeShopWithList
             orderComboBox.Text = "";
             quantityTextBox.Clear();
         }
-
         private void showButton_Click(object sender, EventArgs e)
         {
             Show();
         }
-
         private new void Show()
         {
             string result = "";
@@ -170,11 +164,9 @@ namespace CoffeeShopWithList
                           + quantity[i] + "\nUnit Price:   " + Convert.ToInt32(coffeCost[i]) / Convert.ToInt32(qty) + "" +
                           "\nTotal Price:   " + coffeCost[i] + "\n\n";
             }
-
             showRichTextBox.Text = result;
         }
     }
-
     public static class StringExtensions
     {
         public static bool IsNumeric(this string input)
